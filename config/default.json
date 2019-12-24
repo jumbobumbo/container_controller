@@ -1,0 +1,8 @@
+{
+  "target_container": "boinc_badger",
+  "commands": {
+    "cd_dir": "cd /home/jumbo/boinc",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down --remove-orphans"
+  }
+}
