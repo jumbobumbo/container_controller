@@ -1,10 +1,11 @@
 {
   "mc_server": {
-    "ip": "192.168.1.181",
+    "ip": "192.168.1.38",
     "port": 25566
   },
   "target_container": "boinc_badger",
   "commands": {
+    "check_act_cont": "docker ps -a",
     "cd_dir": "cd /home/jumbo/boinc",
     "up": "docker-compose up -d",
     "down": "docker-compose down --remove-orphans"

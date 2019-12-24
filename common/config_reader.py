@@ -11,8 +11,7 @@ class ReturnConfDict:
         """
         json_file: Path OBJ to (and including) json file
         """
-        # self.json_data = Path(str(Path.cwd()), "container_controller/", "config/", json_file)
-        self.json_data = Path(str(Path.cwd()), "config/", json_file)
+        self.json_data = Path(str(Path.cwd()), "container_controller/", "config/", json_file)
 
     @property
     def json_data(self):
