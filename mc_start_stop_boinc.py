@@ -11,7 +11,7 @@ mc_status = config["trigger_container"] in active_containers
 boinc_status = config["target_container"] in active_containers
 
 
-if datetime.now().strftime("%H:%M:%S") < "10:00:00":  # with computing hours
+if datetime.now().strftime("%H:%M:%S") < "09:45:00":  # with computing hours
 
     if mc_status:  # Minecraft container is up
         # do we have any active players?
@@ -26,5 +26,5 @@ if datetime.now().strftime("%H:%M:%S") < "10:00:00":  # with computing hours
     elif not mc_status and not boinc_status:  # both containers down
         cmd(config["commands"]["dir"], config["commands"]["up"]).send_commands()
 
-elif datetime.now().strftime("%H:%M:%S") > "10:00:00" and boinc_status:  # out of daily computing time
+elif datetime.now().strftime("%H:%M:%S") > "09:45:00" and boinc_status:  # out of daily computing time
     cmd(config["commands"]["dir"], config["commands"]["down"]).send_commands()
