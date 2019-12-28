@@ -18,6 +18,14 @@ class SendCmds:
         """
         return term in str(subprocess.check_output(cmd))
 
+    @staticmethod
+    def return_cmd_response(cmd):
+        """
+        :param cmd: list
+        :return: response from cmd - str
+        """
+        return str(subprocess.check_output(cmd)).strip("'b\\")
+
     def send_commands(self):
         """
         send all commands from args
