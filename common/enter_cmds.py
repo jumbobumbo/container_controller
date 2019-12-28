@@ -2,10 +2,11 @@ import subprocess
 
 
 class SendCmds:
-    def __init__(self, *args):
+    def __init__(self, working_dir, *args):
         """
         :param args: lists ["your"], ["args", "here"], ["please"]
         """
+        self.working_dir = working_dir
         self.args = args
 
     @staticmethod
@@ -31,4 +32,4 @@ class SendCmds:
         send all commands from args
         """
         for cmd in self.args:
-            subprocess.call(cmd)
+            subprocess.check_call(cmd, cwd=self.working_dir)

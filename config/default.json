@@ -6,8 +6,8 @@
   "trigger_container": "new_mc_cock_balls",
   "target_container": "boinc_badger",
   "commands": {
+    "dir": "/home/jumbo/boinc",
     "check_act_cont": ["docker", "ps", "-a"],
-    "cd_dir": ["cd", "/home/jumbo/boinc"],
     "up": ["docker-compose", "up", "-d"],
     "down": ["docker-compose", "down", "--remove-orphans"]
   }
