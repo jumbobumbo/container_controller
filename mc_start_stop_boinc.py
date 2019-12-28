@@ -8,7 +8,7 @@ config = ReturnConfDict().json_data
 # check container status
 active_containers = cmd.return_cmd_response(config["commands"]["check_act_cont"])
 mc_status = config["trigger_container"] in active_containers
-boinc_status = config["boinc_badger"] in active_containers
+boinc_status = config["target_container"] in active_containers
 
 if mc_status:  # Minecraft container is up
     # do we have any active players?
