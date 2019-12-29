@@ -7,8 +7,8 @@
   "commands": {
     "dir": "/home/jumbo/minecraft1",
     "check_act_cont": ["docker", "ps", "-a"],
-    "up": ["docker-compose", "up", "-d"],
-    "down": ["docker-compose", "down", "--remove-orphans"],
+    "up": ["/usr/local/bin/docker-compose", "up", "-d"],
+    "down": ["/usr/local/bin/docker-compose", "down", "--remove-orphans"],
     "pull": ["docker", "pull", "itzg/minecraft-server"]
   }
 }
