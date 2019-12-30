@@ -8,7 +8,7 @@
     "pi_hole": {
       "container_name": "piholey",
       "dir": "/home/jumbo/pihole",
-      "pull": ["docker", "pull", "diginc/pi-hole"]
+      "pull": ["docker", "pull", "pihole/pihole"]
     }
   },
   "generic_cmds": {
