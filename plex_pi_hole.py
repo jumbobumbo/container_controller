@@ -10,7 +10,7 @@ active_containers = cmd.return_cmd_response(config["generic_cmds"]["check_act_co
 plex_status = config["containers"]["plex"]["container_name"] in active_containers
 ph_status = config["containers"]["pi_hole"]["container_name"] in active_containers
 
-if not plex_status or ph_status:
+if not plex_status or not ph_status:
     raise Exception(f"Plex up: {plex_status}, Pi hole up: {ph_status}")
 
 # pull latest images - restart containers
