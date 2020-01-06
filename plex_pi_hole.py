@@ -14,7 +14,7 @@ if not plex_status or not ph_status:
     raise Exception(f"Plex up: {plex_status}, Pi hole up: {ph_status}")
 
 # pull latest images - restart containers
-for _ in [config["containers"]["plex"]["container_name"], config["containers"]["pi_hole"]["container_name"]]:
+for _ in ["plex", "pi_hole"]:
     cmd(config["containers"][_]["dir"],
         config["containers"][_]["pull"],
         config["generic_cmds"]["down"],
