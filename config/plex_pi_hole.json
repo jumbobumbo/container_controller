@@ -1,0 +1,19 @@
+{
+  "containers": {
+    "plex": {
+      "container_name": "plex",
+      "dir": "/home/jumbo/plex",
+      "pull": ["docker", "pull", "plexinc/pms-docker"]
+    },
+    "pi_hole": {
+      "container_name": "piholey",
+      "dir": "/home/jumbo/pihole",
+      "pull": ["docker", "pull", "pihole/pihole"]
+    }
+  },
+  "generic_cmds": {
+    "check_act_cont": ["docker", "ps", "-a"],
+    "up": ["/usr/local/bin/docker-compose", "up", "-d"],
+    "down": ["/usr/local/bin/docker-compose", "down", "--remove-orphans"]
+  }
+}
