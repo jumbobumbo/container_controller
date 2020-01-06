@@ -3,7 +3,7 @@ from common.enter_cmds import SendCmds as cmd
 
 
 # config data we are using
-config = ReturnConfDict("plex_pi_hole.py").json_data
+config = ReturnConfDict("plex_pi_hole.json").json_data
 
 # check container status
 active_containers = cmd.return_cmd_response(config["generic_cmds"]["check_act_cont"])
