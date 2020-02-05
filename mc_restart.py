@@ -13,7 +13,9 @@ if mc_status:  # mc server is up
     num_checks = 0
     while num_checks <= 60:  # wait for up to an hour to restart the container
         # check to see if we have active players
-        player_count = McConn(config["mc_server"]["ip"], config["mc_server"]["port"]).return_act_player_num()
+        with McConn(config["mc_server"]["ip"], config["mc_server"]["port"]) as mc_con:
+            player_count = mc_con.return_act_player_num()
+
         if player_count == 0:
             break  # nobody on, time to restart
         num_checks += 1
