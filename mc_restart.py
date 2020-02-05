@@ -12,8 +12,8 @@ mc_status = cmd.term_in_return_str(config["commands"]["check_act_cont"], config[
 if mc_status:  # mc server is up
     num_checks = 0
     while num_checks <= 60:  # wait for up to an hour to restart the container
-        # check to see if we have active players
-        with McConn(config["mc_server"]["ip"], config["mc_server"]["port"]) as mc_con:
+        # check to see if we have active players - TCP TIME
+        with McConn(config["mc_server"]["ip"], "tcp", config["mc_server"]["port"]) as mc_con:
             player_count = mc_con.return_act_player_num()
 
         if player_count == 0:
