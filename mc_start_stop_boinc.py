@@ -12,7 +12,7 @@ active_containers = cmd.return_cmd_response(config["commands"]["check_act_cont"]
 mc_status = config["trigger_container"] in active_containers
 boinc_status = config["target_container"] in active_containers
 
-cut_off = "10:30:00"
+cut_off = "11:30:00"
 if datetime.now().strftime("%H:%M:%S") < cut_off:  # with computing hours
 
     if mc_status:  # Minecraft container is up
