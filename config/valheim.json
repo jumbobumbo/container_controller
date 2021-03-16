@@ -1,0 +1,14 @@
+{
+    "containers": {
+      "val_1": {
+        "container_name": "valheim_valheim_1",
+        "dir": "/home/jumbo/valheim"
+      }
+    },
+    "generic_cmds": {
+      "check_act_cont": ["docker", "ps", "-a"],
+      "up": ["/usr/local/bin/docker-compose", "up", "-d"],
+      "down": ["/usr/local/bin/docker-compose", "down", "--remove-orphans"],
+      "pull": ["/usr/local/bin/docker-compose", "pull"]
+    }
+  }
