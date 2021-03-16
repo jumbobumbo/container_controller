@@ -7,8 +7,8 @@ if __name__ == "__main__":
     config = ReturnConfDict("valheim.json").json_data
     # pull latest image - restart container
     cmd(
+        config["containers"]["val_1"]["dir"],
         config["generic_cmds"]["pull"],
         config["generic_cmds"]["down"],
-        config["generic_cmds"]["up"],
-        working_dir=config["containers"]["val_1"]["dir"]
+        config["generic_cmds"]["up"]
     ).send_commands()
